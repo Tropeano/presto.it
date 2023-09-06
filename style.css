@@ -1,0 +1,776 @@
+/* pagina  */
+body{
+    font-family: 'Nova Square', cursive;
+    background-color: rgb(26,26,26);
+
+}
+h1,h2,h3,h4,h5,h6, .h1,.h2,.h3,.h4,.h5,.h6{
+    font-family: 'Nova Square', cursive;
+}
+:root{
+    --colorblack : rgb(26,26,26);
+    --coloryellow :rgb(244,211,0);
+}
+
+
+/* INIZIO NAVBAR */
+.navbar-custom{
+    width: 100%;
+    background-color: var(--coloryellow);
+    transition: 0.5s;
+}
+.logo-custom{
+    height: 50px;
+    width: 50px;
+   
+    display: flex; /* Assicurati che il logo sia un elemento flessibile */
+    justify-content: center; /* Centra il contenuto orizzontalmente */
+    align-items: center; /* Centra il contenuto verticalmente */
+    
+   
+  flex: 1;
+}
+
+
+
+
+.navbar-custom {
+    background-color:rgb(244,211,0) ; 
+  }
+  
+  .navbar-custom .nav-link {
+    color:  rgb(26,26,26); 
+    font-size: 18px;
+    
+    margin: 1px; 
+    list-style: none; 
+  }
+  
+
+  .navbar-scrolled {
+    background-color: rgba(0,0,0,0.4)
+  }
+  
+  .navbar-scrolled .nav-link {
+    color: rgb(244,211,0); 
+  }
+
+
+.logo {
+  color:  rgba(0,0,0,0.4);/* Colore nero come colore predefinito del logo */
+
+}
+
+
+.scrolled-logo {
+  filter: invert(1); 
+}
+
+.scrolled-navbar {
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+
+/* FINE CSS NAVBAR */
+
+  /* header css */
+.header-custom{
+    height: 100vh;
+    background:  url(media/header.jpg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: headerAnimation 1s infinite alternate;
+   height: 500px;
+   
+    
+   
+}
+@keyframes headerAnimation {
+    0% {
+      transform: scale(1) translateX(0);
+    }
+    100% {
+      transform: scale(1.1) translateX(20px);
+    }
+  }
+
+  .animated-text {
+    font-size: 1px;
+    color: #333;
+    transition: transform 0.3s ease; 
+  }
+  
+ 
+  .animated-text:hover {
+    transform: scale(1.2);
+  }
+  
+/* fine header css */
+
+/* inizio button header */
+.btn {
+    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color:  rgb(244,211,0);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px rgb(244,211,0);
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  }
+  
+  .btn:active {
+    scale: 0.92;
+  }
+  
+  .btn:hover {
+    background:rgb(244,211,0) ;
+    background: linear-gradient(270deg, rgb(244,211,0) 0%,  rgb(26,26,26) 60%);
+    color: rgb(244,211,0);
+  } 
+
+   /* fine button header */
+
+
+
+   .horizontal-list {
+    display: flex;
+    justify-content: center; 
+    
+    padding: 20px 0;
+    margin: 0; 
+    list-style: none; 
+  }
+
+ 
+  .horizontal-list li {
+    margin: 0 50px;
+    font-size: 30px;
+  }
+
+
+  .horizontal-list li a {
+    text-decoration: none;
+    color:rgb(244,211,0); 
+    
+  }
+  .text-container {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+
+  .animated-text {
+    font-size: 24px;
+    color: #333;
+    transition: transform 0.3s ease; 
+  }
+  
+
+  .animated-text:hover {
+    transform: scale(1.2);
+  }
+  
+
+   
+  .card {
+    position: relative;
+    background: #fff;
+    width: 190px;
+    height: 265px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 120ms;
+    overflow: hidden;
+    box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
+  }
+  
+  .card:active {
+    transform: scale(.95);
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0px 0px 25px 5px rgba(255, 255, 255, .5);
+    z-index: 1;
+  }
+  
+  .card::after {
+    content: "Add to Cart";
+    position: absolute;
+    bottom: -50%;
+    left: 0;
+    padding-left: 15px;
+    background: #181818;
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    line-height: 50px;
+    text-transform: uppercase;
+    z-index: 2;
+    transition: all .2s ease-in;
+  }
+  
+  .card:hover::after {
+    bottom: 0;
+  }
+  
+  .card:active::after {
+    content: "Adding !";
+    height: 65px;
+  }
+  
+  .header-custom{
+    height: 80vh;
+    background:  url(media/header.jpg);
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation-name: muvement ;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  
+}
+
+@keyframes muvement {
+    0% {background-position: left;};
+    100%{background-position: right;};
+}
+
+/* foto */
+
+.custom-picture {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 100vw;
+  margin-top: 100px;
+  overflow: hidden; 
+  top: 200%;
+ right: 50px;
+
+}
+
+.custom-picture img {
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.image-with-caption {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.image-caption {
+  position: absolute;
+  bottom: 300px; 
+  left: 50%;
+  transform: translateX(-50%);
+ 
+  padding: 50px;
+}
+
+
+.image-caption p {
+  margin: 0;
+  font-family: bold 'Nova Square', cursive ;
+ 
+  color:  rgb(244,211,0);
+  left: 30px;
+
+}
+button {
+  cursor: pointer;
+
+  font-family: Helvetica,"sans-serif";
+  transition: all .2s;
+  padding: 20px 20px;
+  border-radius: 100px;
+  background:  rgb(244,211,0);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  
+}
+
+button:hover {
+  background:  rgb(244,211,0);
+}
+
+button > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out
+  
+}
+
+button:hover svg {
+  transform: translateX(5px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+
+
+/* fine foto */
+
+
+/* numeri */
+
+ 
+
+
+.number{
+  font-size: 50px;
+  color: rgb(244,211,0);
+  font-weight: 900;
+}
+.text-start{
+  color: rgb(244,211,0);
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+
+ 
+}
+
+
+
+
+
+
+
+/* bottone preso da libreria esterna CSS */
+
+.cta {
+  border: none;
+  background: none;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 20px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: var(--ColorIce);
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color:  rgb(26,26,26);
+
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+/* CSS SWIPER JS  */
+.swiper {
+  height: 300px;
+
+}
+
+.review-card{
+  height: 300px;
+  width: 300px;
+  padding: 10px;
+  border: 2px solid rgb(26,26,26);
+  border-radius: 20px;
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Nova Square', cursive;
+  color:rgb(26,26,26)
+}
+.task {
+  position: relative;
+  color: #2e2e2f;
+  cursor: move;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  margin-bottom: 1rem;
+  border: 3px dashed transparent;
+  max-width: 350px;
+}
+
+.task:hover {
+  box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+  border-color: rgba(162, 179, 207, 0.2) !important;
+}
+
+.task p {
+  font-size: 15px;
+  margin: 1.2rem 0;
+}
+
+.tag {
+  border-radius: 100px;
+  padding: 4px 13px;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: #1389eb;
+}
+
+.tags {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.options {
+  background: transparent;
+  border: 0;
+  color: #c4cad3;
+  font-size: 17px;
+}
+
+.options svg {
+  fill: #9fa4aa;
+  width: 20px;
+}
+
+.stats {
+  position: relative;
+  width: 100%;
+  color: #9fa4aa;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stats div {
+  margin-right: 1rem;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.stats svg {
+  margin-right: 5px;
+  height: 100%;
+  stroke: #9fa4aa;
+}
+
+.viewer span {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(28, 117, 219);
+  margin-right: -10px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  padding: 2px;
+}
+
+.viewer span svg {
+  stroke: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+/* PAGINA DEGLI ANNUNCI */
+
+.accordion-button , .accordion-body{
+  background-color: rgb(244,211,0);
+  color: rgb(26,26,26);
+
+}
+
+.accordion-button:not(.collapsed){
+  background-color: rgb(244,211,0);
+  color:rgb(26,26,26);
+  box-shadow: none;
+ 
+}
+
+.accordion-button:focus{
+  box-shadow: none;
+}
+
+/* redio button css */
+
+.form-check-input:checked{
+  background-color: var(--ColorSunSet);
+  border-color: var(--ColorSunSet);
+
+}
+
+/*  pagina annunci*/
+
+
+.card-custom {
+
+  width: 230px;
+  height: 300px;
+  background:rgb(244,211,0);
+  border: 2px solid rgb(244,211,0);
+
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background:  url(media/card1.jpg);
+}
+
+.card:last-child {
+  justify-content: flex-end;
+}
+
+.card-img {
+    /* clear and add new css */
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  font-family: 'Nova Square', cursive;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(244,211,0);
+}
+
+.card-divider {
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceNumbers {
+  font-size: 20px;
+  font-weight: 500;
+  color:white;
+}
+
+.card-price p {
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+
+
+.card-btn svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--main-color);
+  transition: all 0.3s;
+}
+
+.card-img:hover {
+  transform: translateY(-3px);
+}
+
+.card-btn:hover {
+  border: 2px solid var(--main-focus);
+}
+
+.card-btn:hover svg {
+  fill: var(--main-focus);
+}
+
+.card-btn:active {
+  transform: translateY(3px);
+}
+ 
+.header-custom1{
+  height: 100vh;
+  background:  url(media/card1.jpg);
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
+}
+.InputContainer {
+  width: 210px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom,rgb(227, 213, 255),rgb(255, 231, 231));
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.input {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  caret-color: rgb(255, 81, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding-left: 15px;
+  letter-spacing: 0.8px;
+  color: rgb(19, 19, 19);
+  font-size: 13.4px;
+}
+
+
+/* form */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 2.5em;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 2px 2px;
+}
+
+.form:hover {
+  transform: translateX(-0.5em) translateY(-0.5em);
+  border: 1px solid #171717;
+  box-shadow: 10px 10px 0px #666666;
+}
+
+.heading {
+  color: black;
+  padding-bottom: 2em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.input {
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  background-color: whitesmoke;
+  outline: none;
+  padding: 0.7em;
+  transition: .4s ease-in-out;
+}
+
+.input:hover {
+  box-shadow: 6px 6px 0px #969696,
+             -3px -3px 10px #ffffff;
+}
+
+.input:focus {
+  background: #ffffff;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+}
+
+.form .btn {
+  margin-top: 2em;
+  align-self: center;
+  padding: 0.7em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 10px;
+  border: none;
+  color: black;
+  transition: .4s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px;
+}
+
+.form .btn:hover {
+  box-shadow: 6px 6px 0px #969696,
+             -3px -3px 10px #ffffff;
+  transform: translateX(-0.5em) translateY(-0.5em);
+}
+
+.form .btn:active {
+  transition: .2s;
+  transform: translateX(0em) translateY(0em);
+  box-shadow: none;
+}
